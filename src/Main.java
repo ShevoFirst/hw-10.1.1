@@ -34,13 +34,6 @@ public class Main {
         }else
             deliveryTime = (short) (deliveryDistance/40+1);
             deliveryTime++;
-        /*if (deliveryDistance<20){
-            deliveryTime = 1;
-        } else if (deliveryDistance>20 && deliveryDistance<60) {
-            deliveryTime = 2;
-        }else
-            deliveryTime = 3;
-        System.out.println();*/
         return deliveryTime;
     }
 
