@@ -1,10 +1,11 @@
 import java.time.LocalDate;
 
 public class Main {
-    public static void checkLeap(int year) {//Задание 1.
-        if (year % 4 == 0) {
-            System.out.println("високосный год - " + year);
-        } else System.out.println("невисокосный год - " + year);
+    public static void checkLeap() {//Задание 1.
+        int currentYear = LocalDate.now().getYear();
+        if ((currentYear % 4 == 0 && currentYear % 100 != 0) || currentYear % 400 == 0) {
+            System.out.println("високосный год - " + currentYear);
+        } else System.out.println("невисокосный год - " + currentYear);
     }
 
     public static void checkDeviceYear(int clientOs, int clientDeviceYear) {//Задание 2.
@@ -38,9 +39,9 @@ public class Main {
     }
 
         public static void main(String[] args) {
-        checkLeap(2022);
+        checkLeap();
         checkDeviceYear(1,2018);
         short deliveryTime = checkDeleviryTime(141);
-            System.out.println("Потребуется дней: " + deliveryTime);
+        System.out.println("Потребуется дней: " + deliveryTime);
         }
 }
